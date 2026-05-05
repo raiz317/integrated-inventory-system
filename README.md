@@ -1,16 +1,16 @@
 # integrated-inventory-system
-Integrated Inventory &amp; Supplier Management System for internal operations.
+Integrated Inventory & Supplier Management System for internal operations.
 
-Aplikasi berbasis web untuk mengelola stok produk dan data supplier secara terintegrasi. Sistem ini dilengkapi dengan dashboard analitik untuk memantau nilai aset dan status stok barang secara real-time.
+A web-based application to manage product stock and supplier data in an integrated manner. This system features an analytical dashboard to monitor asset values and stock status in real-time.
 
-## 🚀 Fitur Utama
+## 🚀 Key Features
 
-- **Dashboard Monitoring**: 
-  - **Total Produk**: Rekapitulasi jumlah SKU yang terdaftar.
-  - **Total Asset Value**: Valuasi total nilai barang (Harga x Stok).
-  - **Total Low Stock Item**: Identifikasi cepat produk yang perlu segera di-restock.
-- **Manajemen Produk**: CRUD data produk (SKU, nama, kategori, harga, stok).
-- **Direktori Supplier**: Pengelolaan data mitra supplier (industri, lokasi, kontak).
+- **Monitoring Dashboard**: 
+  - **Total Products**: Summary of the total registered SKUs.
+  - **Total Asset Value**: Valuation of total goods (Price x Stock).
+  - **Total Low Stock Items**: Quick identification of products that need immediate restocking.
+- **Product Management**: CRUD functionality for product data (SKU, name, category, price, stock).
+- **Supplier Directory**: Management of partner supplier data (industry, location, contact).
 
 ## 🛠️ Tech Stack
 
@@ -19,68 +19,67 @@ Aplikasi berbasis web untuk mengelola stok produk dan data supplier secara terin
 - **Database**: PostgreSQL
 - **Development Tool**: Nodemon
 
-## 📋 Prasyarat
+## 📋 Prerequisites
 
-Pastikan perangkat kamu sudah terinstal:
+Make sure you have the following installed:
 - [Node.js](https://nodejs.org)
 - Nodemon Global:
   ```bash
   npm install -g nodemon
   ```
 
-## ⚙️ Instalasi
+## ⚙️ Installation
 
-1. **Clone repositori:**
+1. **Clone the repository:**
    ```bash
-   git clone [https://github.com](https://github.com/raiz317/integrated-inventory-system.git)
-   cd nama-proyek
+   git clone https://github.com/raiz317/integrated-inventory-system.git
+   cd integrated-inventory-system
    ```
 
-2. **Instal dependensi:**
+2. **Install dependencies:**
    ```bash
    npm install
    ```
 
-3. **Struktur Database:**
-   Pastikan database Anda memiliki tabel berikut:
+3. **Database Structure:**
+   Ensure your database has the following tables:
    - **products**: `sku`, `name`, `category`, `price`, `stock`, `supplier`
    - **suppliers**: `suppliername`, `industry`, `location`, `phone`, `email`
    - **users**: `username`, `email`, `password`
 
-## 🏃 Cara Menjalankan
+## 🏃 Getting Started
 
-Jalankan server pengembangan menggunakan nodemon:
+Run the development server using nodemon:
 
 ```bash
 nodemon index.js
 ```
-*(Sesuaikan `app.js` dengan file entry point utama kamu jika berbeda)*
+*(Adjust `index.js` to your main entry point file if it differs)*
 
-Buka browser dan akses:
+Open your browser and access:
 [http://localhost:3000](http://localhost:3000)
 
-## 📁 Struktur Folder
-- `views/`: Berisi file template `.ejs` untuk tampilan frontend.
-- `public/`: File statis seperti CSS dan Gambar.
-- `routes/`: Pengaturan rute API dan halaman.
-- `app.js`: Konfigurasi utama server Express.
+## 📁 Folder Structure
+- `views/`: Contains `.ejs` template files for the frontend UI.
+- `public/`: Static files such as CSS and Images.
+- `routes/`: API and page route configurations.
+- `app.js` / `index.js`: Main Express server configuration.
 
 ---
 
-Tampilan Web
+## 🖥️ Web Interface
 
-Tampilan Homepage
-<img width="1900" height="825" alt="Screenshot 2026-05-05 174329" src="https://github.com/user-attachments/assets/072cf9d2-8290-4dc0-bde8-87ff8427dd6c" />
+**Homepage View**
+<img width="1900" alt="Screenshot Homepage" src="https://github.com/user-attachments/assets/072cf9d2-8290-4dc0-bde8-87ff8427dd6c" />
 
-Tampilan Dashboard
-<img width="1919" height="831" alt="Dashboard instockflow" src="https://github.com/user-attachments/assets/47d009eb-2151-4eab-987f-287480733f57" />
+**Dashboard View**
+<img width="1919" alt="Dashboard View" src="https://github.com/user-attachments/assets/47d009eb-2151-4eab-987f-287480733f57" />
 
-Tampilan Halaman Products
-<img width="1919" height="824" alt="product instockflow" src="https://github.com/user-attachments/assets/acd62ace-19b2-4acf-8894-04776a89a105" />
+**Products Page**
+<img width="1919" alt="Product Page" src="https://github.com/user-attachments/assets/acd62ace-19b2-4acf-8894-04776a89a105" />
 
-Tampilan Halaman Suppliers
-<img width="1919" height="831" alt="supplier instockflow" src="https://github.com/user-attachments/assets/8926ad40-c1c7-49dd-84c8-d6457031e6ce" />
+**Suppliers Page**
+<img width="1919" alt="Supplier Page" src="https://github.com/user-attachments/assets/8926ad40-c1c7-49dd-84c8-d6457031e6ce" />
 
-
-
-Dibuat oleh Rafid Faiz Putra
+---
+Created by **Rafid Faiz Putra**
