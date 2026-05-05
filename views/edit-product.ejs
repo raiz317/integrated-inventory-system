@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Product - Inventory System</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Bootstrap Icons CSS -->
+    <link rel="stylesheet" href="https://jsdelivr.net">
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body class="bg-light">
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-9 col-xl-8">
+                <div class="card border-0 shadow-sm rounded-4">
+                    
+                    <!-- Header (Layout Modal) -->
+                    <div class="card-header border-0 bg-white px-4 pt-4">
+                        <h4 class="fw-bold mb-0">Edit Product Details</h4>
+                        <p class="text-muted small mt-1">Perbarui informasi produk dan stok Anda secara akurat.</p>
+                    </div>
+
+                    <!-- Body (Layout Modal) -->
+                    <div class="card-body px-4 pb-4">
+                        <form action="/update-product/<%= product.id %>" method="POST">
+                            <div class="row g-4">
+                                <!-- Kolom Kiri -->
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label class="form-label fw-bold small text-muted">SKU</label>
+                                        <input type="text" name="sku" value="<%= product.sku %>" class="form-control bg-light border-0 py-2 shadow-sm" placeholder="e.g. SF-001" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label fw-bold small text-muted">Product Name</label>
+                                        <input type="text" name="name" value="<%= product.name %>" class="form-control bg-light border-0 py-2 shadow-sm" placeholder="e.g. Wireless Mouse" required>
+                                    </div>
+                                    <div class="mb-0">
+                                        <label class="form-label fw-bold small text-muted">Stock Quantity</label>
+                                        <input type="number" name="stock" value="<%= product.stock %>" class="form-control bg-light border-0 py-2 shadow-sm" placeholder="0" required>
+                                    </div>
+                                </div>
+
+                                <!-- Kolom Kanan -->
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label class="form-label fw-bold small text-muted">Price</label>
+                                        <div class="input-group bg-light rounded-3 overflow-hidden shadow-sm">
+                                            <span class="input-group-text border-0 bg-light text-muted small">Rp</span>
+                                            <input type="number" name="price" value="<%= product.price %>" class="form-control border-0 bg-light py-2" placeholder="0" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label fw-bold small text-muted">Supplier</label>
+                                        <select name="supplier" class="form-select bg-light border-0 py-2 shadow-sm">
+                                            <option value="" disabled selected>Pilih Supplier</option>
+                                            <% suppliers.forEach(supplier => { %>
+                                                <option value="<%= supplier.id %>" <%= product.supplier_id == supplier.id ? 'selected' : '' %>><%= supplier.name %></option>
+                                            <% }); %>
+                                        </select>
+                                    </div>
+                                    <div class="mb-0">
+                                        <label class="form-label fw-bold small text-muted">Category</label>
+                                        <select name="category" class="form-select bg-light border-0 py-2 shadow-sm">
+                                            <option value="" selected>Pilih Category</option>
+                                            <% categories.forEach(item => { %>
+                                                <option value="<%= item.category %>" 
+                                                    <%= product.category === item.category ? 'selected' : '' %>>
+                                                    <%= item.category %>
+                                                </option>
+                                            <% }); %>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Action Buttons (Layout Modal) -->
+                            <div class="row g-2 mt-5">
+                                <div class="col-md-6">
+                                    <button type="submit" class="btn btn-primary w-100 py-2 fw-bold rounded-3 shadow">
+                                        <i class="bi bi-check-lg me-1"></i> Update Product
+                                    </button>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="/product" class="btn btn-light w-100 py-2 fw-bold rounded-3 text-secondary border shadow-sm text-center">
+                                        Cancel
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap 5.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
