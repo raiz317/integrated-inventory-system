@@ -1,4 +1,4 @@
-# integrated-inventory-system
+# Integrated-Inventory-System
 Integrated Inventory & Supplier Management System for internal operations.
 
 A web-based application to manage product stock and supplier data in an integrated manner. This system features an analytical dashboard to monitor asset values and stock status in real-time.
