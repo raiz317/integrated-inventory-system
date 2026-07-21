@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InStockFlow Supplier</title>
+    <link rel="shortcut icon" href="../images/Instockflow.jpg" type="image/jpg">
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <style>
         * {
@@ -150,12 +152,16 @@
         <!-- Header -->
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h3 class="fw-bold">Supplier Management</h3>
+            <button class="btn btn-primary btn-sm px-3 py-2 rounded-3">
+                <a href="" class="text-light text-decoration-none" data-bs-toggle="modal"
+                    data-bs-target="#addProductModal"><i class="bi bi-plus-lg"></i> Add New Supplier</a>
+            </button>
         </div>
 
         <!-- Supplier List Card -->
         <div class="card stat-card border-0 shadow-sm">
             <div class="card-header bg-white border-0 py-3 px-4">
-                <div class="row align-items-center mb-3">
+                <!-- <div class="row align-items-center mb-3">
                     <div class="col-md-6">
                         <h5 class="fw-bold mb-0">Supplier List</h5>
                     </div>
@@ -165,7 +171,7 @@
                                 data-bs-target="#addProductModal">+ Add New Supplier</a>
                         </button>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="d-flex flex-wrap align-items-center gap-3 w-100">
                     <form action="/supplier" method="GET" class="d-flex align-items-center gap-2 flex-grow-1">
